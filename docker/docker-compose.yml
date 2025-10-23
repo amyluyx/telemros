@@ -12,3 +12,4 @@ services:
     stdin_open: true
     tty: true
     command: /bin/bash
+    user: "1000:1000"

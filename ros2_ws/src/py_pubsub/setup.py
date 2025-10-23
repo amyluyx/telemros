@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'demo_pkg'
+package_name = 'py_pubsub'
 
 setup(
     name=package_name,
@@ -16,7 +16,7 @@ setup(
     maintainer='root',
     maintainer_email='root@todo.todo',
     description='TODO: Package description',
-    license='TODO: License declaration',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
@@ -24,11 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'demo_orchestrator_node = demo_pkg.demo_orchestrator_node:main',
-            'demo_perception_node = demo_pkg.demo_perception_node:main',
-            'demo_planning_node = demo_pkg.demo_planning_node:main',
-            'demo_control_node = demo_pkg.demo_control_node:main',
-            'talker = py_pubsub.publisher_member_function:main',
+                'talker = py_pubsub.publisher_member_function:main',
+                'listener = py_pubsub.subscriber_member_function:main',
         ],
     },
 )
