@@ -2,6 +2,8 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import String
+from my_can_msgs.msg import Frame
+
 
 
 class CANPublisher(Node):
