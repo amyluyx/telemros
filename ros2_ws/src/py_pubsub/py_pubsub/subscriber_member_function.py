@@ -16,6 +16,7 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import String
+from my_can_msgs.msg import Frame
 
 
 class CANSubscriber(Node):
@@ -23,7 +24,7 @@ class CANSubscriber(Node):
     def __init__(self):
         super().__init__('can_subscriber')
         self.subscription = self.create_subscription(
-            String,
+            Frame,
             'can_topic',
             self.listener_callback,
             10)
